@@ -1,6 +1,5 @@
 body{
     display: flex;
-    background-color: black;
     padding: 0px;
     height: 500px;
 }
@@ -14,7 +13,8 @@ body{
     margin: 0px;
 }
 .container2{
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
     flex: 1;
     margin: 0px;
 }
@@ -22,9 +22,16 @@ body{
     position: relative;
     top: 7rem;
     background-color: rgb(0, 0, 0,.5);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
     color: white;
     text-align: center;
+}
+.headfoot{
+    flex: 1;
+    background-color: lightgrey;
+}
+.center{
+    height: 10em;
 
 }
