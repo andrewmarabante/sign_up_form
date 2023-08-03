@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container1">
         <div id="logo">logo</div>
@@ -13,30 +15,52 @@
     <div class="container2">
         <div class="headfoot">header</div>
         <div class="center">
-            <form>
-                <label for="firstname">First Name</label>
-                <input type="text" id="firstname" name="firstname" placeholder="John">
+            <form id="form" action="/">
+                <div class="formtitle">SIGN UP FOR A PUPPY</div>
+                <div class="names">
+                    <div class="input-control">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="John">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Doe">
+                        <div class="error"></div>
+                    </div>
+                </div>
                 
-                <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Doe">
-            
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="johndoe@email.com">
-                
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="((123)456-7890">
-                
-                <label for="pass">Password</label>
-                <input type="password" id="pass" name="pass" >
-
-                <label for="confirmpassword">Confirm Password</label>
-                <input type="password" id="confirmpassword" name="confirmpassword">
-                <p id="passmessage">dummy text</p>
-
-                <input type="button" value="SUBMIT"/>
+                <div class="emnum">
+                    <div class="input-control">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="johndoe@email.com">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="((123)456-7890">
+                        <div class="error"></div>
+                    </div>
+                </div>
+    
+                <div class="passwords">
+                    <div class="input-control">
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass" name="pass">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="confirmpass">Confirm Password:</label>
+                        <input type="password" id="confirmpass" name="confirmpass">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
             </form>
         </div>
         <div class="headfoot">footer</div>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

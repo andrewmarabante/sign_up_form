@@ -31,7 +31,20 @@ body{
     flex: 1;
     background-color: lightgrey;
 }
-.center{
-    height: 10em;
 
+.input-control{
+    display: flex;
+    flex-direction: column;
+}
+
+.names{
+    display: flex;
+}
+
+.emnum{
+    display: flex;
+}
+
+.passwords{
+    display: flex;
 }
