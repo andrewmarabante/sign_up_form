@@ -1,3 +1,30 @@
 body{
     display: flex;
+    background-color: black;
+    padding: 0px;
+    height: 500px;
+}
+.container1{
+    background-color: aquamarine;
+    background-image: url(./images/puppy.jpg);
+    background-size: cover;
+    background-position: -150px;
+    width: 250px;
+    height:500px;
+    margin: 0px;
+}
+.container2{
+    background-color: blue;
+    flex: 1;
+    margin: 0px;
+}
+#logo{
+    position: relative;
+    top: 7rem;
+    background-color: rgb(0, 0, 0,.5);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+    text-align: center;
+
 }
