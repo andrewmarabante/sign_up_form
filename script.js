@@ -30,6 +30,19 @@ function setSuccess(element)
     inputControl.classList.remove('error')
 }
 
+function emailValidate(email)
+{
+    //regexp for validating an email
+const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+return re.test(String(email).toLowerCase())
+}
+
+function phoneValidate(phone)
+{
+    const re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    return re.test(String(phone))
+}
+
 function validateInput()
 {
     const firstNameValue = firstName.value.trim();
@@ -55,11 +68,21 @@ function validateInput()
     {
         setError(email, 'Email is Required')
     }
-    else{ setSuccess(email);}
+    else if (!emailValidate(emailValue))
+    {
+        setError(email,'Invalid Email')
+    }
+    else{
+         setSuccess(email);
+    }
 
     if (phoneValue === '')
     {
         setError(phone, 'Phone Number is Required')
+    }
+    else if (!phoneValidate(phoneValue))
+    {
+        setError(phone, 'Invalid Phone Number')
     }
     else{ setSuccess(phone);}
 
@@ -67,11 +90,19 @@ function validateInput()
     {
         setError(pass, 'Password is Required')
     }
+    else if(passValue.length < 6)
+    {
+        setError(pass, 'Password Must Be At Least 6 Characters')
+    }
     else{ setSuccess(pass);}
 
     if (confirmPassValue === '')
     {
         setError(confirmPass, 'Confirmation Password is Required')
+    }
+    else if(confirmPassValue != passValue)
+    {
+        setError(confirmPass, 'Passwords Must Match')
     }
     else{ setSuccess(confirmPass);}
 }
