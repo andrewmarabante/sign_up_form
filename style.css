@@ -32,13 +32,21 @@ body{
     background-color: lightgrey;
 }
 
+.formtitle{
+    text-align: center;
+}
+
+.error{
+    color: rgb(179, 11, 11);
+}
+
 .input-control{
     display: flex;
     flex-direction: column;
 }
 
 .input-control input{
-    border: 2px solid #f0f0f0;
+    border: 1px solid #f0f0f0;
     border-radius: 4px;
     display: block;
     font-size: 10px;
@@ -46,22 +54,23 @@ body{
 }
 .names{
     display: flex;
+    justify-content: space-around;
 }
 
 .emnum{
     display: flex;
+    justify-content: space-around;
 }
 
 .passwords{
     display: flex;
+    justify-content: space-around;
 }
 
 .input-control.error input{
-    border-style: solid;
     border-color: red;
 }
 
 .input-control.success input{
-
     border-color: green;
 }
